@@ -1,0 +1,128 @@
+/* ---------------------------------------------------------
+   HTML5 Bones
+   This stylesheet contains print styling and a section for 
+   you to simply add your own. This is a basic template 
+   after all.
+   ---------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Anton|Open+Sans:300,400,700|Reem+Kufi');
+
+    body {
+        /*font-family: 'Anton', sans-serif;*/
+        /*font-family: 'Reem Kufi', sans-serif;*/
+        /*font-family: 'Amatic SC', cursive;*/
+        font-family: 'Open Sans', sans-serif;
+    }
+    /* Default link styling */
+    a:link { color:#0271fb; }
+    a:visited { color:#bd02fb; }
+    a:hover, a:focus { color:#000; }
+    a:active { color:#fb0e02; }
+    
+    
+    
+/* ---------------------------------------------------------
+   Author's styles
+   ---------------------------------------------------------*/
+    body, html {
+        background-color: #B5B8A3;
+        height: 100%;
+        margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Anton', sans-serif;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5rem;
+        padding: 2rem;
+    }
+
+    .main-header {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .main-nav {
+        text-align: center;
+        font-family: 'Reem Kufi', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .main-nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-nav ul li {
+        display: inline-block;
+        padding: 2rem;
+
+    }
+
+    .main-nav ul li a {
+        color: #212121;
+        text-decoration: none;
+        border-bottom: solid 0.5rem transparent;
+    }
+
+    .main-nav ul li a:hover {
+        border-bottom: solid 0.5rem #212121;
+    }
+
+    .index header{
+        text-align: center;
+        color: #212121;
+    }
+
+    .index-picture {
+        height: auto;
+        width: 25%;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+    }
+    
+/* ---------------------------------------------------------
+   Print styles
+   ---------------------------------------------------------*/
+@media print {
+    * {
+        color:#000 !important;
+        box-shadow:none !important;
+        text-shadow:none !important;
+        background:transparent !important;
+    }
+    html { background-color:#fff; }
+    /* Hide navigation */
+    nav { display:none; }
+
+    /* Show link destinations in brackets after the link text */
+    a[href]:after { content: " (" attr(href) ") "; }
+    a[href] {
+        font-weight:bold;
+        text-decoration:underline;
+        color:#06c;
+        border:none;
+    }
+    /* Don't show link destinations for JavaScript or internal links */ 
+    a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
+    
+    /* Show abbr title value in brackets after the text */
+    abbr[title]:after { content: " (" attr(title) ")"; }
+
+    figure { 
+        margin-bottom:1em; 
+        overflow:hidden;
+    }
+
+    figure img { border:1px solid #000; }
+}

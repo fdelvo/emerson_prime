@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Set this to the main language of your site -->
+<head>
+    <meta charset="utf-8">
+
+    <title>Emerson Prime</title>
+
+    <!-- Enter a brief description of your page -->
+    <meta name="description" content="">
+
+    <!-- Define a viewport to mobile devices to use - telling the browser to assume that the page is as wide as the device (width=device-width,
+    and setting the initial page zoom level to be 1 (initial-scale=1.0), and fixinng width=device-width for iOS9 (shtink-to-fit=no) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Add normalize.css which enables browsers to render all elements more consistently and in line with modern standards as it only targets particular styles that need normalizing -->
+    <link href="css/normalize.css" rel="stylesheet" media="all">
+    <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
+    <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
+
+    <!-- Include the site stylesheet -->
+    <link href="../static/css/styles.css" rel="stylesheet" media="all">
+
+</head>
+<body>
+
+    <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
+    <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
+    <header class="main-header" role="banner">
+
+        <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
+        NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
+        <nav class="main-nav" role="navigation">
+            <ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="/news">News</a></li>
+				<li><a href="/music">Music</a></li>
+				<li><a href="/events">Events</a></li>
+				<li><a href="/contact">Contact</a></li>
+                <li><a href="/socialmedia">Social Media</a></li>
+			</ul>
+        </nav>
+
+    </header>
+
+    <!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
+    <div class="wrap">
+
+        <!-- The <main> element is used to enclose the main content, i.e. that which contains the central topic of a document -->
+        <!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
+        <main> element until user agents implement the required role mapping. -->
+        <main class="index" role="main">
+
+            <header>
+                <h1>Emerson Prime</h1>
+            </header>
+
+            <img class="index-picture" src="../static/images/index_image.jpg" />
+
+        </main>
+
+    </div>
+
+</body>
+</html>
