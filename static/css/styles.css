@@ -25,6 +25,7 @@
         background-color: #f5f8fa;
         margin: 0;
         overflow-x: hidden;
+        height: 100%;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -33,7 +34,8 @@
     }
 
     .wrap {
-        margin-bottom: 5%;
+        padding-bottom: 5%;
+        height: 100%;
     }
 
     .main-nav {
@@ -90,6 +92,24 @@
         border-bottom: solid 0.4rem #FDF5F2;
     }
 
+    .tab-control {
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    .tab-control ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .tab-control ul li {
+        display: inline;
+        padding: 2rem;       
+    }
+
+    .tab-control ul li a {
+        color: #212121;
+    }
+
     .view-animate.ng-enter, .view-animate.ng-leave {
           transition: all 0.375s ease-in-out;
 
@@ -114,8 +134,9 @@
     }
 
     .spotify, .youtube {
-        width: 560px;
-        height: 315px;
+        position: relative;
+        width: 45rem;
+        height: 25.313rem;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
         display: block;
         margin-left: auto;
@@ -138,13 +159,14 @@
     }
 
     header {
-        padding: 2rem 2rem 0rem 2rem;
+        padding: 2rem 2rem 2rem 2rem;
         color: #212121 !important;
     }
 
     main {
         width: 80%;
         margin: auto;
+        padding-bottom: 5%;
     }
 
     section {
@@ -156,7 +178,46 @@
         padding: 2rem;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
         margin-bottom: 1rem;
+        display: flex;
     }
+
+    .article-thumbnail {
+        width: 30%;
+    }
+
+    .article-thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+
+    .article-body {
+        width: 70%;
+        padding-left: 1rem;
+    }
+
+    article .article-body header {
+        padding: 0;
+    }
+
+    article .article-body header span {
+        font-weight: 300;
+    }
+
+    .article-content {
+        padding-top: 1rem;
+        height: 6rem;
+        line-height: 1.5;
+        overflow: hidden;
+    }
+
+    .whole-article {
+        height: auto;
+    }
+
+    article footer {
+        
+    }
+
 
 /* ---------------------------------------------------------
    Print styles

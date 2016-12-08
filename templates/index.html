@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en"> <!-- Set this to the main language of your site -->
 <head>
     <meta charset="utf-8">
@@ -20,12 +20,15 @@
     <!-- Include the site stylesheet -->
     <link href="../static/css/styles.css" rel="stylesheet" media="all">
 
+    <script src="https://use.fontawesome.com/bfdfbcedeb.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
     <script src="../static/js/app.js"></script>
     <script src="../static/js/Controller/HomeController.js"></script>
     <script src="../static/js/Controller/NewsController.js"></script>
+    <script src="../static/js/Controller/MusicController.js"></script>
+    <script src="../static/js/Controller/AboutController.js"></script>
 
 </head>
 <body ng-app="emersonAngularApp" ng-controller="MainController">
@@ -33,17 +36,12 @@
     <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
     <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
 
-
-    <!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
-    <div class="wrap">
-
-        <div class="view-animate" ng-view></div>
-
-    </div>
+        <main class="view-animate" ng-view></main>
 
         <nav class="main-nav" ng-class="{'pink-background': navBgColorPink, 'blue-background': navBgColorBlue, 'purple-background': navBgColorPurple, 'red-background': navBgColorRed}" role="navigation">
             <ul>
-				<li><a ng-click="RandomiseBackground()" href="/#/">Home</a></li>
+                <li><a ng-click="RandomiseBackground()" href="/#/">Home</a></li>
+                <li><a ng-click="RandomiseBackground()" href="/#/about">About</a></li>
 				<li><a ng-click="RandomiseBackground()" href="/#/news">News</a></li>
 				<li><a ng-click="RandomiseBackground()" href="/#/music">Music</a></li>
 				<li><a ng-click="RandomiseBackground()" href="/#/events">Events</a></li>

@@ -46,7 +46,11 @@ app.config(function($routeProvider, $locationProvider) {
    .when('/', {
     templateUrl: '../static/js/pages/home.html',
     controller: 'HomeController'
-  })
+   })
+   .when('/about', {
+    templateUrl: '../static/js/pages/about.html',
+    controller: 'AboutController'
+   })
   .when('/news', {
     templateUrl: '../static/js/pages/news.html',
     controller: 'NewsController'
