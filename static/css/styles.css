@@ -215,6 +215,11 @@
         padding: 1rem;
     }
 
+    .two-column {
+        display: inline;
+        width: 50%;
+    }
+
     article img {
         height: auto;
         width: 100%;
@@ -235,6 +240,23 @@
         padding: 1rem;
     }
 
+    dl {
+      width: 100%;
+      padding: 0;
+      margin: 0
+    }
+    dt {
+      float: left;
+      width: 50%;
+      padding: 0;
+      margin: 0
+    }
+    dd {
+      float: left;
+      width: 50%;
+      padding: 0;
+      margin: 0;
+    }
 
 /* ---------------------------------------------------------
    Print styles
