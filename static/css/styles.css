@@ -18,7 +18,6 @@
    Author's styles
    ---------------------------------------------------------*/
     body, html {
-        /*font-family: 'Anton', sans-serif;*/
         /*font-family: 'Reem Kufi', sans-serif;*/
         /*font-family: 'Amatic SC', cursive;*/
         font-family: 'Open Sans', sans-serif;
@@ -74,7 +73,7 @@
 
     .main-nav ul li {
         display: inline-block;
-        padding: 2rem;
+        padding: 1rem;
 
     }
 
@@ -93,16 +92,18 @@
     }
 
     .tab-control {
-        padding: 0rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
     }
 
     .tab-control ul {
         padding: 0;
         margin: 0;
+        text-align: center;
     }
 
     .tab-control ul li {
         display: inline;
+        list-style: none;
         padding: 2rem;       
     }
 
@@ -141,7 +142,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 2rem;
+        margin-top: 0;
         margin-bottom: 2rem;
     }
 
@@ -166,11 +167,11 @@
     main {
         width: 80%;
         margin: auto;
-        padding-bottom: 5%;
+        padding-bottom: 8%;
     }
 
     section {
-        padding: 2rem;
+
     }
 
     article {
@@ -203,19 +204,35 @@
         font-weight: 300;
     }
 
-    .article-content {
+    .news-content {
         padding-top: 1rem;
         height: 6rem;
         line-height: 1.5;
         overflow: hidden;
     }
 
+    .article-content {
+        padding: 1rem;
+    }
+
+    article img {
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .whole-article {
         height: auto;
     }
 
-    article footer {
-        
+    .contact-ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-ul li {
+        padding: 1rem;
     }
 
 

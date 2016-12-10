@@ -60,16 +60,12 @@ app.config(function($routeProvider, $locationProvider) {
     controller: 'MusicController'
   })
   .when('/events', {
-    templateUrl: 'events.html',
+    templateUrl: '../static/js/pages/events.html',
     controller: 'EventsController'
   })
   .when('/contact', {
-    templateUrl: 'contact.html',
+    templateUrl: '../static/js/pages/contact.html',
     controller: 'ContactController'
-  })
-  .when('/socialmedia', {
-    templateUrl: 'socialmedia.html',
-    controller: 'SocialMediaController'
   });
 
   // configure html5 to get links working on jsfiddle
