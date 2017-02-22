@@ -37,6 +37,10 @@
         height: 100%;
     }
 
+    .mobile-nav {
+        display: none;
+    }
+
     .main-nav {
         position: fixed;
         bottom: 0;
@@ -136,8 +140,8 @@
 
     .spotify, .youtube {
         position: relative;
-        width: 45rem;
-        height: 25.313rem;
+        width: 720px;
+        height: 405px;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
         display: block;
         margin-left: auto;
@@ -146,9 +150,13 @@
         margin-bottom: 2rem;
     }
 
+    .home {
+        text-align: center;
+    }
+
     .index-picture {
         height: auto;
-        width: 30%;
+        width: 50%;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
         position: absolute;
         left: 0;
@@ -256,6 +264,91 @@
       width: 50%;
       padding: 0;
       margin: 0;
+    }
+
+    @media(max-device-width: 1024px) {
+        main {
+            width: 98%;
+            margin: auto;
+            padding-bottom: 8%;
+        }
+
+        .main-nav {
+            display: none;
+        }
+
+        .mobile-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0;
+            background-color: #095A78;
+            text-align: center;
+            font-family: 'Reem Kufi', sans-serif;
+            font-size: 1.5rem;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+            display: block;
+            color: white;
+        }
+
+        .mobile-nav i {
+            padding: 1rem;
+        }
+
+        .mobile-nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav ul li {
+        display: block;
+        padding: 1rem;
+
+    }
+
+    .mobile-nav ul li a {
+        color: #FDF5F2;
+        text-decoration: none;
+        border-bottom: solid 0.4rem transparent;
+    }
+
+        .youtube {
+            width: 100%;
+            max-height: 405px;
+        }
+
+        .index-picture {
+            width: 100%;
+        }
+
+        article {
+            display: block;
+        }
+
+        .article-content {
+            padding: 0;
+        }
+
+        .article-body {
+            padding: 0;
+        }
+
+        .two-column {
+            padding: 0;
+        }
+
+        header {
+            padding: 0.5rem;
+            padding-left: 0;
+        }
+    }
+
+    @media(max-device-width: 504px) {
+        .youtube {
+            width: 100%;
+            max-height: 180px;
+        }
     }
 
 /* ---------------------------------------------------------
