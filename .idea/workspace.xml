@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb16f324-4040-475a-a859-e27669fafda5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,7 +134,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="Beta" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="fdelvo" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="emerson_prime" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -594,6 +599,14 @@
       <option name="presentableId" value="Default" />
       <updated>1481144883933</updated>
     </task>
+    <task id="LOCAL-00001" summary="Beta Version">
+      <created>1487792032610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1487792032610</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -633,6 +646,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Beta Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta Version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
