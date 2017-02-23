@@ -4,15 +4,15 @@
         <h1>EVENTS</h1>
     </header>
 
-<article>
+<article ng-repeat="e in events | orderBy: 'Date'">
 
     <header>
-        <h1>Event Name</h1>
+        <h1>{{ e.Date | date: "dd. MMM" }}</h1>
     </header>
     <div class="article-content">
         <ul>
-            <li>Location: Example</li>
-            <li>Date: 22.12.1994</li>
+            <li>Name: {{ e.Name }}</li>
+            <li>Location: {{ e.Location }}</li>
             <li>Link: <a target="_blank" href="www.google.de">Link</a></li>
         </ul>
     </div>
