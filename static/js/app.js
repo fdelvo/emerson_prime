@@ -1,6 +1,3 @@
-/**
- * Created by fdelv on 12/7/2016.
- */
 const app = angular.module("emersonAngularApp", ["ngRoute", "ngAnimate"]);
 
 app
@@ -80,7 +77,6 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: "ContactController"
         });
 
-    // configure html5 to get links working on jsfiddle
     $locationProvider.html5Mode({
         enabled: false,
         requireBase: false

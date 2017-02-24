@@ -1,3 +1,4 @@
-/**
- * Created by fdelv on 12/7/2016.
- */
+app.controller("ContactController", function ($scope, $routeParams) {
+    $scope.name = "ContactController";
+    $scope.params = $routeParams;
+});
