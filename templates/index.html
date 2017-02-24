@@ -36,32 +36,36 @@
 </head>
 <body ng-app="emersonAngularApp" ng-controller="MainController">
 
-    <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
-    <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
+<!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
+<!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
 
-        <main class="view-animate" ng-view></main>
+<main class="view-animate" ng-view></main>
 
-        <nav class="main-nav" ng-class="{'pink-background': navBgColorPink, 'blue-background': navBgColorBlue, 'purple-background': navBgColorPurple, 'red-background': navBgColorRed}" role="navigation">
-            <ul>
-                <li><a ng-click="RandomiseBackground()" href="/#/">Home</a></li>
-                <li><a ng-click="RandomiseBackground()" href="/#/about">About</a></li>
-				<li><a ng-click="RandomiseBackground()" href="/#/music">Music</a></li>
-                <li><a ng-click="RandomiseBackground()" href="/#/photos">Photos</a></li>
-				<li><a ng-click="RandomiseBackground()" href="/#/events">Events</a></li>
-				<li><a ng-click="RandomiseBackground()" href="/#/contact">Contact & Social Media</a></li>
-			</ul>
-        </nav>
+<nav class="main-nav"
+     ng-class="{'pink-background': navBgColorPink, 'blue-background': navBgColorBlue, 'purple-background': navBgColorPurple, 'red-background': navBgColorRed}"
+     role="navigation">
+    <ul>
+        <li><a ng-click="RandomiseBackground()" href="/#/">Home</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/about">About</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/music">Music</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/photos">Photos</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/events">Events</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/contact">Contact & Social Media</a></li>
+    </ul>
+</nav>
 
-        <nav class="mobile-nav" ng-click="expandNavigation = !expandNavigation" ng-class="{'pink-background': navBgColorPink, 'blue-background': navBgColorBlue, 'purple-background': navBgColorPurple, 'red-background': navBgColorRed}" role="navigation">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-            <ul ng-show="expandNavigation">
-                <li><a ng-click="RandomiseBackground()" href="/#/">Home</a></li>
-                <li><a ng-click="RandomiseBackground()" href="/#/about">About</a></li>
-				<li><a ng-click="RandomiseBackground()" href="/#/music">Music</a></li>
-                <li><a ng-click="RandomiseBackground()" href="/#/photos">Photos</a></li>
-				<li><a ng-click="RandomiseBackground()" href="/#/events">Events</a></li>
-				<li><a ng-click="RandomiseBackground()" href="/#/contact">Contact & Social Media</a></li>
-			</ul>
-        </nav>
+<nav class="mobile-nav" ng-click="expandNavigation = !expandNavigation"
+     ng-class="{'pink-background': navBgColorPink, 'blue-background': navBgColorBlue, 'purple-background': navBgColorPurple, 'red-background': navBgColorRed}"
+     role="navigation">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    <ul ng-show="expandNavigation">
+        <li><a ng-click="RandomiseBackground()" href="/#/">Home</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/about">About</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/music">Music</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/photos">Photos</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/events">Events</a></li>
+        <li><a ng-click="RandomiseBackground()" href="/#/contact">Contact & Social Media</a></li>
+    </ul>
+</nav>
 </body>
 </html>

@@ -1,11 +1,16 @@
 app
-    .controller('EventsController', ["dateInThePastFilter", "$scope", "$routeParams", function (dateInThePastFilter, $scope, $routeParams) {
-        $scope.name = 'EventsController';
+    .controller("EventsController", ["dateInThePastFilter", "$scope", "$routeParams", function (dateInThePastFilter, $scope, $routeParams) {
+        $scope.name = "EventsController";
         $scope.params = $routeParams;
 
         $scope.eventsTemp = [
             {Name: "Broncos", Date: new Date(2017, 9, 18), Location: "Hannover", Link: "n/a"},
-            {Name: "Loca Hero Halbfinale (Musikzentrum)", Date: new Date(2017, 8, 23), Location: "Hannover", Link: "n/a"},
+            {
+                Name: "Loca Hero Halbfinale (Musikzentrum)",
+                Date: new Date(2017, 8, 23),
+                Location: "Hannover",
+                Link: "n/a"
+            },
             {Name: "Bandnacht", Date: new Date(2017, 8, 22), Location: "Osnabrück", Link: "n/a"},
             {Name: "Holzhauser Kirmes", Date: new Date(2017, 8, 15), Location: "Holzhausen", Link: "n/a"},
             {Name: "Straßenparty", Date: new Date(2017, 8, 9), Location: "Rheine", Link: "n/a"},

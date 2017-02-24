@@ -1,6 +1,6 @@
 app
-    .controller('PhotosController', ["$scope", "$routeParams", function ($scope, $routeParams) {
-        $scope.name = 'PhotosController';
+    .controller("PhotosController", ["$scope", "$routeParams", function ($scope, $routeParams) {
+        $scope.name = "PhotosController";
         $scope.params = $routeParams;
 
         $scope.photos = [
@@ -16,7 +16,7 @@ app
         $scope.showImage = function (img) {
             $scope.fullImage = true;
             $scope.img = img;
-        }
+        };
 
         $scope.hideImage = function () {
             $scope.fullImage = false;

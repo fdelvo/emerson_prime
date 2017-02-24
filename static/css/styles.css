@@ -4,7 +4,7 @@
    you to simply add your own. This is a basic template 
    after all.
    ---------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Anton|Open+Sans:300,400,700|Reem+Kufi');
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Anton|Open+Sans:300,400,700|Reem+Kufi");
 
 /* Default link styling */
 a:link {
@@ -24,12 +24,12 @@ a:active {
 }
 
 /* ---------------------------------------------------------
-   Author's styles
+   Author"s styles
    ---------------------------------------------------------*/
 body, html {
-    /*font-family: 'Reem Kufi', sans-serif;*/
-    /*font-family: 'Amatic SC', cursive;*/
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: "Reem Kufi", sans-serif;*/
+    /*font-family: "Amatic SC", cursive;*/
+    font-family: "Open Sans", sans-serif;
     background-color: #f5f8fa;
     margin: 0;
     overflow-x: hidden;
@@ -37,7 +37,7 @@ body, html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 0;
 }
 
@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     background-color: #095A78;
     text-align: center;
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: "Reem Kufi", sans-serif;
     font-size: 1.5rem;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
 }
@@ -293,12 +293,12 @@ article img {
 
 .gallery {
     display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  display: -webkit-box;
-  display: flex;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
 }
 
 .thumbnail {
@@ -319,14 +319,14 @@ article img {
 }
 
 .thumbnail img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 @media (max-device-width: 1024px) {
@@ -348,7 +348,7 @@ article img {
         padding: 0;
         background-color: #095A78;
         text-align: center;
-        font-family: 'Reem Kufi', sans-serif;
+        font-family: "Reem Kufi", sans-serif;
         font-size: 1.5rem;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
         display: block;
@@ -454,7 +454,7 @@ article img {
         border: none;
     }
 
-    /* Don't show link destinations for JavaScript or internal links */
+    /* Don"t show link destinations for JavaScript or internal links */
     a[href^="javascript:"]:after, a[href^="#"]:after {
         content: "";
     }
