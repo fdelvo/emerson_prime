@@ -1,10 +1,10 @@
 /**
  * Created by fdelv on 12/7/2016.
  */
-const app = angular.module('emersonAngularApp', ['ngRoute', 'ngAnimate']);
+const app = angular.module("emersonAngularApp", ["ngRoute", "ngAnimate"]);
 
 app
-    .filter('dateInThePast', function () {
+    .filter("dateInThePast", function () {
         return function (input) {
             var out = [];
             for (var o in input) {
@@ -15,7 +15,7 @@ app
             return out;
         };
     })
-    .controller('MainController', function ($scope, $route, $routeParams, $location) {
+    .controller("MainController", function ($scope, $route, $routeParams, $location) {
         $scope.$route = $route;
         $scope.$location = $location;
         $scope.$routeParams = $routeParams;
@@ -55,29 +55,29 @@ app
 
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
-        .when('/', {
-            templateUrl: '../static/js/pages/home.html',
-            controller: 'HomeController'
+        .when("/", {
+            templateUrl: "../static/js/pages/home.html",
+            controller: "HomeController"
         })
-        .when('/about', {
-            templateUrl: '../static/js/pages/about.html',
-            controller: 'AboutController'
+        .when("/about", {
+            templateUrl: "../static/js/pages/about.html",
+            controller: "AboutController"
         })
-        .when('/photos', {
-            templateUrl: '../static/js/pages/photos.html',
-            controller: 'PhotosController'
+        .when("/photos", {
+            templateUrl: "../static/js/pages/photos.html",
+            controller: "PhotosController"
         })
-        .when('/music', {
-            templateUrl: '../static/js/pages/music.html',
-            controller: 'MusicController'
+        .when("/music", {
+            templateUrl: "../static/js/pages/music.html",
+            controller: "MusicController"
         })
-        .when('/events', {
-            templateUrl: '../static/js/pages/events.html',
-            controller: 'EventsController'
+        .when("/events", {
+            templateUrl: "../static/js/pages/events.html",
+            controller: "EventsController"
         })
-        .when('/contact', {
-            templateUrl: '../static/js/pages/contact.html',
-            controller: 'ContactController'
+        .when("/contact", {
+            templateUrl: "../static/js/pages/contact.html",
+            controller: "ContactController"
         });
 
     // configure html5 to get links working on jsfiddle
