@@ -12,6 +12,15 @@ app
             "Publikumspreis_Emerson-Prime.jpg",
             "rock-in-der-region-finale2016_201612041054_full.jpg"
         ];
+
+        $scope.showImage = function (img) {
+            $scope.fullImage = true;
+            $scope.img = img;
+        }
+
+        $scope.hideImage = function () {
+            $scope.fullImage = false;
+        }
     }]);
 
 

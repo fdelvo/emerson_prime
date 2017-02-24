@@ -13,7 +13,7 @@
         <ul>
             <li>Name: {{ e.Name }}</li>
             <li>Location: {{ e.Location }}</li>
-            <li>Link: <a target="_blank" href="www.google.de">Link</a></li>
+            <li>Link: <a ng-hide="e.Link == 'n/a'" target="_blank" href="{{ e.Link }}">{{ e.Link }}</a></li>
         </ul>
     </div>
 
