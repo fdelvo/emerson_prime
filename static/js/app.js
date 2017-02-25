@@ -75,6 +75,34 @@ app.config(function ($routeProvider, $locationProvider) {
         .when("/contact", {
             templateUrl: "../static/js/pages/contact.html",
             controller: "ContactController"
+        })
+        .when("/admin", {
+            templateUrl: "../static/js/pages/admin.html",
+            controller: "AdminController"
+        })
+        .when("/admin/about", {
+            templateUrl: "../static/js/pages/adminAbout.html",
+            controller: "AdminController"
+        })
+        .when("/admin/contact", {
+            templateUrl: "../static/js/pages/adminContact.html",
+            controller: "AdminController"
+        })
+        .when("/admin/events", {
+            templateUrl: "../static/js/pages/adminEvents.html",
+            controller: "AdminController"
+        })
+        .when("/admin/music", {
+            templateUrl: "../static/js/pages/adminMusic.html",
+            controller: "AdminController"
+        })
+        .when("/admin/photos", {
+            templateUrl: "../static/js/pages/adminPhotos.html",
+            controller: "AdminController"
+        })
+        .when("/admin/home", {
+            templateUrl: "../static/js/pages/adminHome.html",
+            controller: "AdminController"
         });
 
     $locationProvider.html5Mode({
