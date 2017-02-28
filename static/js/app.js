@@ -53,55 +53,31 @@ app
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "../static/js/pages/home.html",
+            templateUrl: "../static/js/Pages/home.html",
             controller: "HomeController"
         })
         .when("/about", {
-            templateUrl: "../static/js/pages/about.html",
+            templateUrl: "../static/js/Pages/about.html",
             controller: "AboutController"
         })
         .when("/photos", {
-            templateUrl: "../static/js/pages/photos.html",
+            templateUrl: "../static/js/Pages/photos.html",
             controller: "PhotosController"
         })
         .when("/music", {
-            templateUrl: "../static/js/pages/music.html",
+            templateUrl: "../static/js/Pages/music.html",
             controller: "MusicController"
         })
         .when("/events", {
-            templateUrl: "../static/js/pages/events.html",
+            templateUrl: "../static/js/Pages/events.html",
             controller: "EventsController"
         })
         .when("/contact", {
-            templateUrl: "../static/js/pages/contact.html",
+            templateUrl: "../static/js/Pages/contact.html",
             controller: "ContactController"
         })
         .when("/admin", {
-            templateUrl: "../static/js/pages/admin.html",
-            controller: "AdminController"
-        })
-        .when("/admin/about", {
-            templateUrl: "../static/js/pages/adminAbout.html",
-            controller: "AdminController"
-        })
-        .when("/admin/contact", {
-            templateUrl: "../static/js/pages/adminContact.html",
-            controller: "AdminController"
-        })
-        .when("/admin/events", {
-            templateUrl: "../static/js/pages/adminEvents.html",
-            controller: "AdminController"
-        })
-        .when("/admin/music", {
-            templateUrl: "../static/js/pages/adminMusic.html",
-            controller: "AdminController"
-        })
-        .when("/admin/photos", {
-            templateUrl: "../static/js/pages/adminPhotos.html",
-            controller: "AdminController"
-        })
-        .when("/admin/home", {
-            templateUrl: "../static/js/pages/adminHome.html",
+            templateUrl: "../static/js/Pages/admin.html",
             controller: "AdminController"
         });
 

@@ -19,26 +19,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.min.js"></script>
-    <script src="../static/js/adminApp.js"></script>
+    <script src="../static/js/Admin/AdminApp.js"></script>
+    <script src="../static/js/Admin/AdminController.js"></script>
 
 </head>
-<body ng-app="emersonAdminAngularApp" ng-controller="MainAdminController">
+<body ng-app="emersonAngularAdminApp" ng-controller="AdminMainController">
 
 <main class="view-animate" ng-view></main>
 
-<nav class="admin-nav" role="navigation">
+<nav class="main-nav" role="navigation">
     <ul>
         <li><a href="/admin#/home">Home</a></li>
-        <li><a href="/admin/news">News</a></li>
-        <li><a href="/admin/about">About</a></li>
-        <li><a href="/admin/music">Music</a></li>
-        <li><a href="/admin/photos">Photos</a></li>
-        <li><a href="/admin/events">Events</a></li>
-        <li><a href="/admin/contact">Contact & Social Media</a></li>
+        <li><a href="/admin#/news">News</a></li>
+        <li><a href="/admin#/about">About</a></li>
+        <li><a href="/admin#/music">Music</a></li>
+        <li><a href="/admin#/photos">Photos</a></li>
+        <li><a href="/admin#/events">Events</a></li>
+        <li><a href="/admin#/contact">Contact & Social Media</a></li>
     </ul>
 </nav>
 
-<nav class="mobile-admin.nav" ng-click="expandNavigation = !expandNavigation"
+<nav class="mobile-nav" ng-click="expandNavigation = !expandNavigation"
      ng-class="{'pink-background': navBgColorPink, 'blue-background': navBgColorBlue, 'purple-background': navBgColorPurple, 'red-background': navBgColorRed}"
      role="navigation">
     <i class="fa fa-bars" aria-hidden="true"></i>
