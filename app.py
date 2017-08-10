@@ -1,104 +1,107 @@
+from os import environ
+
 from flask import Flask, render_template
+from flask import redirect
+from flask import request
+from flask import session
+from flask import url_for
+from flask_user import SQLAlchemyAdapter, UserManager
+from flask_login import login_user
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
+
+from forms import SigninForm, SignupForm
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1wal!col?33@localhost:5000/emerson_db'
+app.config.from_object(environ['APP_SETTINGS'])
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+from models import User, AppText
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(256), unique=True, nullable=False)
-    email = db.Column(db.String(256), unique=True, nullable=False)
-    password = db.Column(db.String(256), nullable=False)
+db_adapter = SQLAlchemyAdapter(db, User)
+user_manager = UserManager(db_adapter, app)
 
-    def __init__(self, username, email):
-        self.username = username
-        self.email = email
-
-    def __repr__(self):
-        return '<User %r>' % self.username
-
-
-class NewsArticle(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(256), unique=True, nullable=False)
-    content = db.Column(db.String(256), unique=True, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    user = db.relationship("User", backref=db.backref("newsarticles", lazy=True))
-
-    def __repr__(self):
-        return '<NewsArticle %r>' % self.title
-
-
-class Event(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(256), unique=True, nullable=False)
-    location = db.Column(db.String(256), unique=True, nullable=False)
-    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    link = db.Column(db.String(256))
-    remarks = db.Column(db.String(256))
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    user = db.relationship("User", backref=db.backref("events", lazy=True))
-
-    def __repr__(self):
-        return '<Event %r>' % self.name
-
-
-class AppText(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    keyword = db.Column(db.String(256), unique=True, nullable=False)
-    text = db.Column(db.String(256), unique=True, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    user = db.relationship("User", backref=db.backref("apptexts", lazy=True))
-
-    def __init__(self, keyword, text):
-        self.keyword = keyword
-        self.text = text
-
-    def __repr__(self):
-        return '<AppText %r>' % self.keyword
-
-
-class Video(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    embeded_link = db.Column(db.String(256), unique=True, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    user = db.relationship("User", backref=db.backref("videos", lazy=True))
-
-    def __repr__(self):
-        return '<Video %r>' % self.embeded_link
 
 @app.route("/")
 def main():
     return render_template("index.html")
 
+
 @app.route("/about")
 def about():
-    text = AppText.query.first()
-    print(text.keyword)
-    return render_template("about.html")
+    app_texts = AppText.query.filter_by(site="about").all()
+    return render_template("about.html", app_texts=app_texts)
+
 
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
+
 @app.route("/events")
 def events():
     return render_template("events.html")
+
 
 @app.route("/music")
 def music():
     return render_template("music.html")
 
+
 @app.route("/news")
 def news():
     return render_template("news.html")
 
+
 @app.route("/admin")
 def admin():
     return render_template("admin.html")
+
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    form = SignupForm()
+
+    if request.method == 'POST':
+        if form.validate() == False:
+            return render_template('signup.html', form=form)
+        else:
+            new_user = User(form.username.data, form.email.data, user_manager.hash_password(form.password.data), True)
+            db.session.add(new_user)
+            db.session.commit()
+
+            session['email'] = new_user.email
+
+            return "[1] Create a new user [2] sign in the user [3] redirect to the user's profile"
+
+    elif request.method == 'GET':
+        return render_template('signup.html', form=form)
+
+
+@app.route('/signin', methods=['GET', 'POST'])
+def signin():
+    form = SigninForm()
+
+    if request.method == 'POST':
+        if form.validate() == False:
+            return render_template('signin.html', form=form)
+        else:
+            user = user_manager.find_user_by_email(form.email.data)
+            login_user(user)
+            return redirect(url_for('admin'))
+
+    elif request.method == 'GET':
+        return render_template('signin.html', form=form)
+
+
+@app.route("/app_text")
+def post_app_text():
+    app_text = AppText(request.form["keyword"], request.form["site"], request.form["text"], request.form["text"])
+    db.session.add(app_text)
+    db.session.commit()
+    db.session.flush()
+    return redirect(url_for("main"))
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=80)

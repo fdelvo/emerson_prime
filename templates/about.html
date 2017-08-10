@@ -9,20 +9,16 @@
 
 <section class="about">
     <div class="about-header">
-        <h1>Emerson Prime</h1>
+        {% for app_text in app_texts %}{% if "band_name" in app_text.keyword %}{{ app_text.text | safe }}{% endif %}{% endfor %}
     </div>
     <div class="about-band-description">
-        <p>Emerson Prime vereinen in ihren Songs eine ganz eigene Mischung aus Soul, Funk, Hip-Hop und Jazz: manchmal dem guten alten Motown ganz nahe, manchmal sehr modern mit sphärischen Synthie-Pads. Mit ihrer unverwechselbaren rauchig-souligen Stimme zeichnet Erika Emerson, die Berlinerin mit britischen Wurzeln, in ihren englischsprachigen Texten mal direkte, mal abstrakte Bilder vom Leben und der Liebe.</p>
+        {% for app_text in app_texts %}{% if "band_description" in app_text.keyword %}{{ app_text.text | safe}}{% endif %}{% endfor %}
     </div>
     <div class="about-band-picture">
         <img src="../static/images/Emerson%20Prime%20-%20Bandfoto.jpg" />
     </div>
     <div class="about-band-members">
-        <p>Erika Emerson - Vocals</p>
-        <p>Joschka Merhof - Keys, Voc</p>
-        <p>Tobias "T-Drum" Lammers - Drums</p>
-        <p>Alex Shirazi - Guitar, Voc</p>
-        <p>Simon Lorenz - Bass</p>
+        {% for app_text in app_texts %}{% if "band_members" in app_text.keyword %}{{ app_text.text | safe }}{% endif %}{% endfor %}
     </div>
 </section>
 </main>
